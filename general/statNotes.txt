@@ -1,0 +1,12 @@
+A hypothesis is a proposed explanation or prediction about a phenomenon or event that can be tested through further investigation and experimentation.
+
+F-test: compares the variance of two or more groups to determine whether they are significantly different from each other
+
+- F-score:
+    - Represents the ratio of two variances and the strength of their relationship
+    - the higher the score, the more likely the feature is related to the target variable
+- p-value: measures the statistical significance of the F-score
+    - Represents probability that F-score is obtained by chance given the null hypothesis that there is no relationship between the feature and the target value
+    - The lower this value the more likely the F-score is obtained by chance and the more like the feature is relevant
+
+Bayes Theorem

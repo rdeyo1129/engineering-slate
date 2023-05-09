@@ -1,0 +1,68 @@
+- Data Types
+    - Numerical: numbers that are integers or of infinite value
+    - Categorical or nominal: values that can't be measured against each other
+    - Ordinal: like Categorical but can be measured against each other
+- Mean, Median, Mode
+    - If median has two center numbers, take the average of them
+- Standard Deviation
+    - Describes how spread out data is
+        - Low: close to the mean
+        - High: spread over wide range
+    - Variance
+        - average between each (value - mean)^2
+        - SD = `σ = sqrt[ Σ(xᵢ - μ)² / N ]`
+    - numpy.std() and numpy.var()
+- Percentiles
+    - Describes the percent of all numbers less than a value
+    - numpy.percentile(arr, percent)
+- Data Distribution
+    - x = numpy.random.uniform(min float, max float, size)
+    - Histogram
+        - import matplotlib.pyplot as plt, plt.hist(x, 100)
+- Normal Data Distribution
+    - numpy.random.normal(mean, SD, size)
+- Scatter Plot
+    - need separate arrays for each axis
+    - plt.scatter(x, y)
+    - can use random.normal distribution here
+- Linear Regression
+    - Regression: relationship between values
+    - ML Regression: relationship is used to predict outcome of future events
+    - from scipy import stats
+    - slope, intercept, r, p, std_err = stats.linregress(x, y)
+    - func: return slope * x + intercept
+    - model = list(map(func, x))
+    - draw scatter plot
+    - display linear regression plt.plot(x, model)
+    - r (between -1 and 1) determines relationship between x and y axis and values
+        - closer to zero is means a bad relationship
+    - input x value in func to predict y value
+    - linear regression is not always your best option
+- Polynomial Regression
+    - import numpy + pyplot
+    - model = numpy.poly1d(numpy.polyfit(x, y, degree))
+    - line = numpy.lispace(start, stop, # samples)
+    - plt.plot(line, model(line))
+    - r^2
+        - from sklearn.metrics import r2_score
+        - r2_score(y, model(x))
+- Multiple Regression
+    - import pandas
+        - allows reading of an csv file and return of a DataFrame object
+    - df = pandas.read_csv("file.csv")
+        - X = df[[ 'weight', 'volume' ]]
+        - y = df['co2']
+        - independent values uppercase, dependent values lowercase
+    - from sklearn import linear_model
+        - regr = linear_model.LinearRegression()
+        - regr.fit(X, y)
+        - regr.predict([[2300, 1300]])
+    - Coefficient
+        - describes relationship with unknown variable
+        - print(regr.coef_)
+            - outputs numbers for both independent variables given and how increasing each by 1 would increase the dependent variable
+- Scale
+    - 
+- Train / Test
+    - 
+- Decision Tree
